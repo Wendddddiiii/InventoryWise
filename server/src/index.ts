@@ -1,4 +1,4 @@
-/* routes imports */
+
 import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
@@ -6,6 +6,8 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 
+/* routes imports */
+import dashboardRoutes from "./routes/dashboardRoutes";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -20,17 +22,14 @@ app.use(cors());
 
 
 /* ROUTES */
-app.get("/hello", (req, res) => {
-    res.send("hello, world");
-});
+app.use("/dashboard", dashboardRoutes); //http://localhost:8003/dashboard
 
 
 
 
 
 /* SERVER */
-const port = process.env.PORT || 3003;
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+const port = Number(process.env.PORT) || 3003;
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on port ${port}`);
 });
-
