@@ -81,6 +81,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
+        <Image
+          src={`/assets/logo1.png`}
+          alt="logo"
+          width={27}
+          height={27}
+          className="rounded w-6"
+        />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
