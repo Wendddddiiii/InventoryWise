@@ -130,7 +130,6 @@ const CardSalesSummary = () => {
             </ResponsiveContainer>
           </div>
 
-          {/* FOOTER */}
           <div>
             <hr />
             <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4">
