@@ -67,7 +67,7 @@ const Navbar = () => {
           <hr className="w-0 h-7 border border-solid border-l border-gray-300 mx-3" />
           <div className="flex items-center gap-3 cursor-pointer">
             
-            <span className="font-semibold">Wendi</span>
+            <span className="font-semibold">InventoryWise</span>
           </div>
         </div>
         <Link href="/settings">
