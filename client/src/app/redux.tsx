@@ -26,16 +26,13 @@ import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {
   return {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    getItem(_: string) {
+    getItem(_key: any) {
       return Promise.resolve(null);
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setItem(_: string, value: unknown) {
+    setItem(_key: any, value: any) {
       return Promise.resolve(value);
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    removeItem(_: string) {
+    removeItem(_key: any) {
       return Promise.resolve();
     },
   };
@@ -51,12 +48,10 @@ const persistConfig = {
   storage,
   whitelist: ["global"],
 };
-
 const rootReducer = combineReducers({
   global: globalReducer,
   [api.reducerPath]: api.reducer,
 });
-
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 /* REDUX STORE */
