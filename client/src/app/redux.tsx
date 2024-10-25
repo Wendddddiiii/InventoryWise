@@ -26,13 +26,13 @@ import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {
   return {
-    getItem(_key: any) {
+    getItem(_: string) {
       return Promise.resolve(null);
     },
-    setItem(_key: any, value: any) {
+    setItem(_: string, value: unknown) {
       return Promise.resolve(value);
     },
-    removeItem(_key: any) {
+    removeItem(_: string) {
       return Promise.resolve();
     },
   };
@@ -48,10 +48,12 @@ const persistConfig = {
   storage,
   whitelist: ["global"],
 };
+
 const rootReducer = combineReducers({
   global: globalReducer,
   [api.reducerPath]: api.reducer,
 });
+
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 /* REDUX STORE */
