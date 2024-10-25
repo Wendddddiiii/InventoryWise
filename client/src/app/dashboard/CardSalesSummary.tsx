@@ -1,7 +1,7 @@
 
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import { TrendingUp } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 import {
   Bar,
   BarChart,
