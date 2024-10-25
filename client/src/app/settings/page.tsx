@@ -13,7 +13,6 @@ const mockSettings: UserSetting[] = [
   { label: "Username", value: "wending", type: "text" },
   { label: "Email", value: "inventory.wise@example.com", type: "text" },
   { label: "Notification", value: true, type: "toggle" },
-  { label: "Dark Mode", value: false, type: "toggle" },
   { label: "Language", value: "English", type: "text" },
 ];
 

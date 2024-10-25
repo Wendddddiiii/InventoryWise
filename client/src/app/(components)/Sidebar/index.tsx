@@ -86,12 +86,13 @@ const Sidebar = () => {
           alt="logo"
           width={27}
           height={27}
-          className="rounded w-6"
+          className="rounded w-6 cursor-pointer"
+          onClick={toggleSidebar}
         />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
-          } font-extrabold text-2xl`}
+          } font-bold text-xl`}
         >
           InventoryWise
         </h1>

@@ -1,3 +1,4 @@
+
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import { TrendingUp } from "lucide-react";
 import React, { useState } from "react";
@@ -73,17 +74,6 @@ const CardSalesSummary = () => {
                   {averageChangePercentage.toFixed(2)}%
                 </span>
               </div>
-              <select
-                className="shadow-sm border border-gray-300 bg-white p-2 rounded"
-                value={timeframe}
-                onChange={(e) => {
-                  setTimeframe(e.target.value);
-                }}
-              >
-                <option value="daily">Daily</option>
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-              </select>
             </div>
             {/* CHART */}
             <ResponsiveContainer width="100%" height={350} className="px-7">
@@ -130,6 +120,7 @@ const CardSalesSummary = () => {
             </ResponsiveContainer>
           </div>
 
+          {/* FOOTER */}
           <div>
             <hr />
             <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4">
