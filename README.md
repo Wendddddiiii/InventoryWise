@@ -23,3 +23,7 @@
 ## Why I Built This App
 
 This project was built as part of my ongoing practice to improve my understanding of **AWS** and solidify my skills in **AWS deployment**. By using a full-stack approach, I was able to cover key aspects of AWS including setup, cost management, and networking fundamentals.
+
+## 🌐Deployment
+
+Check out the deployed version: https://main.d2c6h07h2n1ls0.amplifyapp.com/
