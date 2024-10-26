@@ -82,11 +82,11 @@ const Sidebar = () => {
         }`}
       >
         <Image
-          src={`/assets/logo1.png`}
+          src="https://s3-inventorywise.s3.ap-southeast-2.amazonaws.com/assets/logo1.png"
           alt="logo"
           width={27}
           height={27}
-          className="rounded w-6 cursor-pointer"
+          className="rounded w-8 cursor-pointer"
           onClick={toggleSidebar}
         />
         <h1

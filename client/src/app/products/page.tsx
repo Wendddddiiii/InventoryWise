@@ -60,7 +60,7 @@ const Products = () => {
                     <div key={product.productId} className='border shadow rounded-md p-4 max-w-full w-full mx-auto' >
                         <div className='flex flex-col items-center'>
                             <Image
-                            src={`/assets/product${(Math.floor(Math.random() * 35) + 1)}.png`} // Dynamically select the image
+                            src={`https://s3-inventorywise.s3.ap-southeast-2.amazonaws.com/assets/product${(Math.floor(Math.random() * 35) + 1)}.png`} // Dynamically select the image
                             alt={product.name}
                             width={150}
                             height={150}
